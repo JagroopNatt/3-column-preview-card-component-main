@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+
+:root {
+  --lexend-font-family: "Lexend Deca", sans-serif;
+  --Big-font-family: "Big Shoulders Display", cursive;
+
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+
+  --white-p: hsla(0, 0%, 100%, 0.75);
+  --light-gray: hsl(0, 0%, 95%);
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* --Mobile first design-- */
+
+body {
+  background-color: var(--light-gray);
+  display: grid;
+  place-items: center;
+  font-family: "Lexend Deca", sans-serif;
+  line-height: 1.6;
+}
+
+main {
+  width: 92%;
+  margin: 4em auto;
+  border-radius: 0.6em;
+  max-width: 1200px;
+}
+h1 {
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 2.5rem;
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
+  color: var(--light-gray);
+  text-transform: uppercase;
+}
+img {
+  max-width: 100%;
+}
+p {
+  color: var(--white-p);
+  font-size: 15px;
+}
+button {
+  padding: 0.7em 1.5em;
+  border-radius: 100px;
+  font-size: 1em;
+  background-color: var(--light-gray);
+  margin-top: 1.2em;
+  border: 1px solid var(--light-gray);
+
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 500;
+}
+section {
+  padding: 1em;
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 2em;
+  padding-bottom: 1.4em;
+}
+
+/* Card Section */
+
+.card-orange {
+  background-color: var(--bright-orange);
+  border-top-left-radius: 0.4em;
+  border-top-right-radius: 0.4em;
+}
+.card-cyan {
+  background-color: var(--dark-cyan);
+}
+.card-dark-cyan {
+  background-color: var(--Very-dark-cyan);
+  border-bottom-right-radius: 0.4em;
+  border-bottom-left-radius: 0.4em;
+}
+
+
+/* Button text color */
+
+.orange-button {
+  color: var(--bright-orange);
+}
+.light-cyan-button {
+  color: var(--dark-cyan);
+}
+.dark-cyan-button {
+  color: var(--Very-dark-cyan);
+}
+
+/* Button hover */
+
+.light-cyan-button:hover {
+  background-color: var(--dark-cyan);
+  color: var(--white-p);
+  cursor: pointer;
+}
+.orange-button:hover {
+  background-color: var(--bright-orange);
+  color: var(--white-p);
+  cursor: pointer;
+}
+.dark-cyan-button:hover {
+  background-color: var(--Very-dark-cyan);
+  color: var(--white-p);
+  cursor: pointer;
+}
+
+
+/* --Destop design--*/
+@media (min-width: 660px) {
+  main {
+    display: flex;
+  }
+  button {
+    margin-top: 5em;
+  }
+}
+@media (min-width: 975px) {
+  h1 {
+    font-size: 3rem;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+  button {
+    font-size: 1.2rem;
+  }
+}
